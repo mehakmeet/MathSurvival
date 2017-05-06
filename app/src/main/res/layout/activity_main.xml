@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mehakmeet.mathsurvival.MainActivity"
+    android:background="@drawable/backmain">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter time(in s) for Timer:"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_marginLeft="100dp"
+        android:background="@android:drawable/spinner_dropdown_background"
+        android:id="@+id/textView"
+        android:layout_above="@+id/timer_value"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:id="@+id/timer_value"
+        android:background="@android:drawable/picture_frame" />
+
+    <Button
+        android:text="Hard af"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hardbutton"
+        android:onClick="difficulty"
+        android:tag="3"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_above="@+id/textView"
+        android:layout_alignStart="@+id/mediumbutton"
+        android:layout_marginBottom="56dp" />
+
+    <Button
+        android:text="Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mediumbutton"
+        android:onClick="difficulty"
+        android:tag="2"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_above="@+id/hardbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp" />
+
+    <Button
+        android:text="Easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/easybutton"
+        android:background="@android:drawable/editbox_background_normal"
+        android:padding="0dp"
+        android:onClick="difficulty"
+        android:tag="1"
+        android:layout_above="@+id/mediumbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:text="SELECT YOUR DIFFICULTY:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="20sp"
+        android:background="@android:color/holo_blue_dark"
+        android:id="@+id/difficultyText"
+        android:layout_marginBottom="27dp"
+        android:layout_above="@+id/easybutton"
+        android:layout_alignStart="@+id/textView" />
+</RelativeLayout>
